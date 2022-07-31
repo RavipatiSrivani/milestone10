@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2 align="center">Meta Programming</h2>
+    </head>
+    <body align="center">
+        <script>
+            const employee={
+                firstName:'Hello',
+                lastName:'World'
+            };
+            let logHandler={
+                get:function(target,fieldName){
+                    document.write("Log: ",target[fieldName]+"<br>");
+                    return Reflect.get(target,fieldName);
+                }
+            };
+            let func=()=>{
+                let p=new Proxy(employee,logHandler);
+                p.firstName;
+                p.lastName;
+            };
+            func();
+        </script>
+    </body>
+</html>

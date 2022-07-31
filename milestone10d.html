@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2 align="center">Classes</h2>
+    </head>
+    <body align="center">
+        <script>
+            function Pen(name,color,price){
+                this.name=name;
+                this.color=color;
+                this.price=price;
+            }
+            const pen1=new Pen("Trio","Blue","$2");
+            Pen.prototype.showPrice=function()
+            {
+                document.write('Price of ' +(this.name) +' is '+ (this.price));
+            }
+                pen1.showPrice();
+            </script>
+            </body>
+            </html>

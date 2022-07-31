@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2 align="center">Prototype based object oriented programming</h2>
+    </head>
+    <body align="center">
+        <script>
+            const o={
+                a:1,
+                b:2,
+                __proto__:{
+                    b:3,
+                    c:4,
+                },
+            };
+            document.write(o.a+"<br>");
+            document.write(o.b+"<br>");
+            document.write(o.c+"<br>");
+            document.write(o.d);
+            </script>
+    </body>
+    </html>

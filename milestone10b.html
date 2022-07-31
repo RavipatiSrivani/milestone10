@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2 align="center">Objects</h2>
+    </head>
+    <body align="center">
+        <script>
+            const original={
+                name:'fiesta',car:{color:'blue'}
+            }
+            const copied=Object.assign({},original)
+            original.name='Focus'
+            original.car.color='yellow'
+            const o2=Object.create(original);
+            o2.name="Harrier"
+            o2.car.color="black"
+            document.write("Assigned Values:"+"<br>"+"Vehicle Name:"+copied.name+"<br>"+"Vehicle Color:"+copied.car.color+"<br><br>")
+            document.write("Created Values:"+"<br>"+"Vehicle Name:"+o2.name+"<br>"+"Vehicle Color:"+o2.car.color+"<br><br>")
+            document.write("Frozen:"+"<br>"+Object.isFrozen(original)+"<br><br>")
+            document.write("Seal:"+"<br>"+Object.seal(original)+"<br><br>")
+            document.write("isSealed:"+"<br>"+Object.isSealed(original))
+        </script>
+    </body>
+</html>
